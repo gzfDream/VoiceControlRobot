@@ -1,0 +1,15 @@
+#BNF+IAT 1.0;
+!grammar command;
+!slot <want>;
+!slot <motion>;
+!slot <object>;
+!slot <direction>;
+!slot <number>;
+
+!start <callstart>;
+<callstart>:[<want>][<motion>]<direction><number>[<object>];
+<want>:我想|我要|请|帮我|我想要|请帮我;
+<motion>:拿起!id(10001)|抓住!id(10001)|抓取!id(10001)|抓起!id(10001);
+<object>:马克杯!id(10001)|茶杯!id(10001)|高脚杯!id(10001);
+<direction>:左边!id(10001)|右边!id(10001)|前边!id(10001)|后边!id(10001)|左面!id(10001)|右面!id(10001)|前面!id(10001)|后面!id(10001);
+<number>:第一个!id(10001)|第二个!id(10001)|第三个!id(10001)|第四个!id(10001)|第五个!id(10001)|第六个!id(10001)|第七个!id(10001);
